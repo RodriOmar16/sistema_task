@@ -9,7 +9,13 @@ class Proyecto extends Model
 {
     /** @use HasFactory<\Database\Factories\ProyectoFactory> */
     use HasFactory;
+    
     protected $primaryKey = 'proyecto_id';
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'inhabilitado',
+    ];
 
     public function listas()
     {

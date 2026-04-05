@@ -9,7 +9,13 @@ class Categoria extends Model
 {
     /** @use HasFactory<\Database\Factories\CategoriaFactory> */
     use HasFactory;
+
     protected $primaryKey = 'categoria_id';
+    protected $fillable = [
+        'nombre',
+        'inhabilitada',
+    ];
+
 
     public function tarjetas()
     {

@@ -11,6 +11,15 @@ class Tarjeta extends Model
     use HasFactory;
 
     protected $primaryKey = 'tarjeta_id';
+    protected $fillable = [
+        'lista_id',
+        'title',
+        'descripcion',
+        'fecha_inicio',
+        'fecha_entrega',
+        'completado',
+        'inhabilitado',
+    ];
 
     public function lista()
     {

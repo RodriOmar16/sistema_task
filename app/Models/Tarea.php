@@ -9,7 +9,14 @@ class Tarea extends Model
 {
     /** @use HasFactory<\Database\Factories\TareaFactory> */
     use HasFactory;
+
     protected $primaryKey = 'tarea_id';
+    protected $fillable = [
+        'tarjeta_id',
+        'completada',
+        'inhabilitada',
+    ];
+
     public $incrementing = false; // porque es VARCHAR
 
     public function tarjeta()
